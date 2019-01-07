@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>NTOUCSE POKEMON</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="Untitled-1.css" />
+</head>
+<style>
+    h1{
+        text-align:center;
+        font-size: 80px;  
+        font-weight:bolder;
+        top:10%;
+    }
+    img{
+        width:300px;
+        height:300px;
+    }
+    img:hover{
+        border: solid 3px red;
+    }
+    p{
+        font-size: 60px;
+        color: white;
+        font-weight: bolder;
+        display: none;
+    }
+</style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+     window.addEventListener("load",start,false);
+     function start(){
+        document.getElementById("img").addEventListener("mouseover",wow,false);
+        document.getElementById("img").addEventListener("mouseleave",bye,false);
+     }
+     function wow(){
+        $("#p").show();
+     }
+     function bye(){
+        $("#p").hide();
+     }
+
+ </script>
+<body>
+    <audio id="sound" preload="auto"><source src="bt6.mp3" type="audio/mpeg">button</audio>
+    <h1 >選擇你的角色</h1>
+    <div valign="center" align="center" >
+        <img src="1.png" id="img" onclick="window.open('name.html','_self')" onmouseover="sound.play()">
+        <p id="p">學殿生</p>
+    </div>
+    <embed src="音效/等待1.mp3" autostart=true hidden=true loop=true>
+    
+</body>
+</html>
